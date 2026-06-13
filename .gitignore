@@ -1,0 +1,10 @@
+.env 
+__pycache__/ 
+*.pyc 
+*.pkl 
+*.csv 
+data/ 
+logs/ 
+reports/ 
+test_groq.py 
+watchlist.json 
