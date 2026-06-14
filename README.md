@@ -21,33 +21,6 @@ MantleMind AI is a production-grade autonomous intelligence platform built nativ
 
 The platform was built to solve a real problem. Mantle blockchain data moves too fast for humans to monitor manually. Traders miss whale movements. Analysts miss anomaly spikes. Institutions have no automated risk monitoring for Mantle ecosystem. MantleMind AI fixes all of this with a fully autonomous multi-agent pipeline.
 
----
-
-## System Architecture
-
-```
-Mantle Mainnet (Chain ID 5000)
-            |
-     Agent 1: Data Collector
-            |
-     Agent 2: Anomaly Detector (Isolation Forest ML)
-     Agent 3: Whale Tracker
-            |
-     Agent 4: Alpha Signal Generator
-            |
-     Agent 5: Alert Dispatcher -----> Telegram
-     Agent 6: Report Builder -------> PDF / Excel
-     Agent 7: LLM Synthesis --------> Groq AI
-     Agent 8: Smart Watchlist
-     Agent 9: Entity Clustering
-     Agent 10: MEV Detector
-            |
-     Multi-Agent Consensus Council
-            |
-     Streamlit Dashboard (Live)
-```
-
----
 
 ## 10 Agents — What Each One Does
 
@@ -81,105 +54,11 @@ Applies unsupervised clustering to detect wallets likely controlled by the same 
 **Agent 10 — MEV Detector**
 Scans every block for sandwich attack patterns by detecting front-run and back-run transactions around victim transactions within the same block. First MEV detection system built specifically for Mantle Network.
 
----
 
-## Multi-Agent Consensus System
-
-All agents submit findings to a central council that produces a weighted consensus decision.
-
-| Agent | Role | Weight |
-|-------|------|--------|
-| Agent 2 | Anomaly Detection | 20% |
-| Agent 3 | Whale Tracking | 25% |
-| Agent 4 | Alpha Model | 35% |
-| Agent 7 | LLM Synthesis | 20% |
-
-Full AI Reasoning Chain displayed step by step — complete transparency, no black box.
-
----
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Blockchain | Mantle Mainnet — Chain ID 5000 |
-| Data Layer | Web3.py — Live RPC Connection |
-| ML Engine | Scikit-learn — Isolation Forest |
-| AI Layer | Groq API — LLaMA Model |
-| Frontend | Streamlit — Plotly |
-| Alerts | Telegram Bot API |
-| Reports | ReportLab — OpenPyXL |
-| Smart Contract | Solidity 0.8.19 |
-| Deployment | Streamlit Cloud |
-
----
 
 ## Live Results from Mainnet Testing
 
 During live testing on Mantle Mainnet the system processed 25 transactions in under 7 seconds. Anomaly rates ranged from 8 percent to 45 percent across different block windows. Critical transactions were flagged and Telegram alerts dispatched automatically. PDF reports generated instantly. Wallet clusters detected with 60 percent confidence. MEV detector actively scanning every block in real-time.
-
----
-
-## Quick Start
-
-```bash
-git clone https://github.com/ipooja21/mantlemind-ai
-cd mantlemind-ai
-pip install -r requirements.txt
-cp .env.example .env
-streamlit run app.py
-```
-
-## Environment Variables
-
-```
-MANTLE_RPC_URL=https://rpc.mantle.xyz
-GROQ_API_KEY=your_groq_api_key
-TELEGRAM_BOT_TOKEN=your_telegram_bot_token
-TELEGRAM_CHAT_ID=your_chat_id
-WHALE_THRESHOLD_MNT=1000
-ALPHA_ALERT_THRESHOLD=75
-```
-
----
-
-## Project Structure
-
-```
-mantlemind-ai/
-├── app.py                        # Streamlit dashboard
-├── pipeline.py                   # Master orchestrator
-├── requirements.txt
-├── .env.example
-├── MantleIntelligence.sol        # Smart contract
-├── agents/
-│   ├── agent1_data_collector.py
-│   ├── agent2_anomaly_detector.py
-│   ├── agent3_whale_tracker.py
-│   ├── agent4_alpha_generator.py
-│   ├── agent5_alert_agent.py
-│   ├── agent6_report_agent.py
-│   ├── agent7_llm.py
-│   ├── agent8_watchlist.py
-│   ├── agent9_wallet_clustering.py
-│   └── agent10_mev_detector.py
-└── core/
-    └── config.py
-```
-
----
-
-## Smart Contract
-
-```
-Network:  Mantle Testnet
-Contract: MantleIntelligence.sol
-Features: On-chain report storage
-          Wallet watchlist registry
-          Anomaly event logging
-```
-
----
 
 ## Built By
 
